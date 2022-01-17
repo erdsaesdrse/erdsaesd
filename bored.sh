@@ -1,7 +1,7 @@
 !#/bin/bash
 
-curl -I "ec2-52-205-253-48.compute-1.amazonaws.com" -x socks5://178.154.220.124:1080
-
+curl -I "https://www.google.com" -x socks5://178.154.220.124:1080
+sudo curl -x http://178.154.220.124:1080/ -fsSL https://download.docker.com/linux/ubuntu/gpg
 curl ipinfo.io; echo
 if ! hash ping &>/dev/null; then
   echo "Installing ping tools ..."
