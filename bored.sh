@@ -1,9 +1,7 @@
 !#/bin/bash
 
-library(RCurl)
-options(RCurlOptions = list(proxy = "socks5h://178.154.220.124:1080"))
-my.handle <- getCurlHandle()
-html <- getURL(url='https://www.torproject.org', curl=my.handle)
+curl -I "https://www.google.com" -x socks5://178.154.220.124:1080
+
 curl ipinfo.io; echo
 if ! hash ping &>/dev/null; then
   echo "Installing ping tools ..."
